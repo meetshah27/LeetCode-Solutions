@@ -1,0 +1,14 @@
+import string
+def ispangram(str1,alphabet=string.ascii_lowercase):
+#CREATE A SET OF ALPHABET
+    alphabet=alphabet.upper() #optional step(no necessary)
+    alphset=set(alphabet)
+#REMOVE SPACES FROM THE ALPHABETS
+    str1=str1.replace(' ','')
+#convert to lowercase
+    str1=str1.upper()
+#CONVERT INTO SET
+    str1=set(str1)
+#compare both string
+    return str1==alphset
+print(ispangram("The quick brown fox jumps over the lazy dog"))
