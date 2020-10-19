@@ -1,0 +1,32 @@
+from random import shuffle
+
+def shuffle_list(my_list):
+    shuffle(my_list)
+    return my_list
+my_list=['','X','']
+
+#take the players guess
+def taking_player_guess():
+    guess=''
+    while guess not in ['1','2','3']:
+      guess=input('choose any number between 1,2,3 your choice!!')
+    return int(guess)-1
+
+#comparing both answers
+def checking_the_answers(my_list,guess):
+    if my_list[guess]=='X':
+        print('correct answer')
+        print(my_list)
+    else:
+        print('wrong answer')
+        print(my_list)
+
+
+#intial start
+my_list=['','X','']
+#shuffling the list
+mixed_up=shuffle_list(my_list)
+#taking player guess
+guess=taking_player_guess()
+#comparing both
+checking_the_answers(mixed_up,guess)
